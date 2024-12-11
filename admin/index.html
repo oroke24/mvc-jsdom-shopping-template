@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>"company name" Shop eCommerce HTML CSS Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="../assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="../image/x-icon" href="../assets/img/favicon.ico">
+
+    <link rel="stylesheet" href="../assets/css/external/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/views/custom.css">
+    <link rel="stylesheet" href="../assets/css/views/myModals.css">
+
+    <!-- Load fonts style after rendering the layout styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="../assets/css/fontawesome.min.css">
+
+      <!--Linking Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+</head>
+
+<body>
+  <h1><a href="../index.html"><i class="fa fa-arrow-left" style="color:#AAA"></i></a></h1>
+  <h1>Welcome to the admin area!</h1>
+  <div id="root"></div> 
+</div>
+
+<!-- editItem modal view -->
+<div id="editItemModal">
+ <div id="editItemContainer">
+     <span class="close" id="closeEditItemModal">&times;</span>
+
+     <div id="createdOn"></div>
+
+     <div class="form-group">
+        <label for="name">Name:</label>
+		<input type="text" id="name" placeholder="Enter name">
+     </div>
+
+		<div class="form-group">
+			<label for="description">Description:</label>
+			<textArea id="description" placeholder="Enter description"></textArea>
+        </div>
+     
+     <div class="form-group">
+        <label for="price">Price:</label>
+        <input type="text" id="price" placeholder="Enter price">
+     </div>
+     
+
+     <div class="form-group">
+        <label for="quantity">Quantity:</label>
+        <input type="text" id="quantity" placeholder="Enter quantity">
+     </div>
+
+     
+     <div class="form-group" style="display: flex; margin:10px;">
+        <label for="isActive" style="margin-right: 10px;">Currently active?</label>
+        <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="isActive">
+            <label class="custom-control-label" for="isActive"></label>
+        </div>
+     </div>
+
+     <div class="error" id="editItemErrorMessage"></div>
+
+ </div>
+</div>
+
+<!-- End editItem modal -->
+
+    <!-- Start Script -->
+    <script src="../assets/js/0external/jquery-1.11.0.min.js"></script>
+    <script src="../assets/js/0external/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../assets/js/0external/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/0external/templatemo.js"></script>
+    <script src="../assets/js/1models/item.js"></script>
+    <script src="../assets/js/2views/createToggleDropdown.js"></script>
+    <script src="../assets/js/2views/dropDownArea.js"></script>
+    <script src="../assets/js/2views/createButton.js"></script>
+    <script src="../assets/js/2views/todaysDate.js"></script>
+    <script src="../assets/js/2views/loadingMessage.js"></script>
+    <script src="../assets/js/2views/createIconFromClass.js"></script>
+    <script src="../assets/js/2views/createImageBox.js"></script>
+    <script src="../assets/js/2views/createImageUploadButton.js"></script>
+    <script src="../assets/js/2views/horizontalImageList.js"></script>
+    <script src="../assets/js/2views/removeNodes.js"></script>
+    <script src="../assets/js/3controllers/editItem.js"></script>
+    <script src="../assets/js/3controllers/populateImage.js"></script>
+    <script src="../assets/js/4backend/firebaseConnect.js"></script>
+    <script src="../assets/js/4backend/attachObserver.js"></script>
+    <script src="../assets/js/4backend/AuthorizationManager.js"></script>
+    <script src="../assets/js/4backend/ItemDataManager.js"></script>
+    <script src="js/main.js"></script>
+    <!-- End Script -->
+</body>
+
+</html>
